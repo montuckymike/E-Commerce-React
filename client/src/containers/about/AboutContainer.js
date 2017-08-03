@@ -13,7 +13,7 @@ class AboutContainer extends React.Component{
 
     setTitle = () => {
       setTimeout(() => {
-        this.setState({ title: "About"})
+        this.setState({ title: "About: dos"})
       }, 2000)
     }
   render(){

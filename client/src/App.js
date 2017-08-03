@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HomeContainer, AboutContainer } from "./containers";
+import { HomeContainer, AboutContainer, ShopContainer } from "./containers";
 import './App.css';
 
 
@@ -9,6 +9,7 @@ class App extends Component {
       <div>
         <HomeContainer />
         <AboutContainer />
+        <ShopContainer />
       </div>
     );
   }

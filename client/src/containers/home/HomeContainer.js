@@ -14,8 +14,8 @@ class HomeContainer extends React.Component{
 
     getTitle = () => {
       setTimeout(() => {
-      this.setState({title: "Home Container Title"})
-    }, 3000)
+      this.setState({title: "Home: Easy as uno"})
+    }, 1000)
     }
 
   render(){
