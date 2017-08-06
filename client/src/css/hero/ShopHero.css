@@ -1,0 +1,8 @@
+.hero-image-shop {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("http://www.rd.com/wp-content/uploads/sites/2/2016/08/09-skipped-clear-shopping-SamuelBrownNG.jpg");
+  height: 1000px;
+}

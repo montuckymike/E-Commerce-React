@@ -1,0 +1,9 @@
+
+.hero-image-product {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("http://az616578.vo.msecnd.net/files/2017/01/28/6362116593780066211384157076_shopping-in-wexford-2048x1024.jpg");
+  height: 1000px;
+}

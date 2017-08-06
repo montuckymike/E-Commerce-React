@@ -1,0 +1,23 @@
+.navlinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar ul li Link {
+  text-decoration: none;
+  color: white;
+}
+
+.navlinks li:hover {
+  background-color: #9b59b6;
+  color: white;
+}
