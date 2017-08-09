@@ -4,7 +4,7 @@ import { Shop } from "../../components"
 class ShopContainer extends React.Component{
 
   state={
-    title: undefined
+    title: undefined,
   }
 
   componentDidMount(){

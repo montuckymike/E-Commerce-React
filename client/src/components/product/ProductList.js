@@ -18,8 +18,11 @@ const ProductList = (props) => {
       <div className="product-container">
         {
           props.products.map((item) =>
-          <Product product={ item } />
-        )
+            <Product
+              product={ item }
+              addToCart={ props.addToCart }
+            />
+          )
         }
       </div>
     </div>

@@ -4,7 +4,7 @@ import faker from "faker";
 class ProductContainer extends React.Component{
   state = {
     productsArray: undefined,
-
+    cart: [],
   }
 
   componentDidMount(){
@@ -22,12 +22,22 @@ class ProductContainer extends React.Component{
     this.setState({productsArray: tempProducts })
   }
 
+  addToCart = (product) => {
+    const tempCart = this.state.cart;
+    tempCart.push(product);
+    this.setState({ cart: tempCart });
+    alert(`${product.name} was added to cart`)
+  }
+
   render(){
     return (
       <div>
       {
         this.state.productsArray
-        ? <ProductList products={ this.state.productsArray } />
+        ? <ProductList
+        products= { this.state.productsArray }
+        addToCart= { this.addToCart }
+         />
         : <h1> Loading Products </h1>
       }
       </div>
