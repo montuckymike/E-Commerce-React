@@ -1,4 +1,6 @@
-import React from "react"
+import React, {Component} from "react";
+import {render} from "react-dom";
+import Random from "react-random";
 import faker from "faker";
 
 const Product = () => {
@@ -7,12 +9,12 @@ const Product = () => {
     <div className="product-container">
       <div className="product-item">
         <div className="thumbnail">
-          <img src="https://ep1.pinkbike.org/p5pb13296567/p5pb13296567.jpg" />
+          <img src={ faker.image.image() } />
             <div className="product-title">
-              <h3> {faker.commerce.productName()} </h3>
+              <h3> <Random value="commerce.productName" /> </h3>
             </div>
-              <p> <strong> Price: $4.00  </strong> </p>
-              <p><em> Category: bike comps </em></p>
+              <p> <strong> Price: $<Random value="commerce.price"/> </strong> </p>
+              <p><em> Category: <Random value="commerce.department" /> </em></p>
 
         </div>
       </div>

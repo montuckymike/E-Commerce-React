@@ -3,3 +3,4 @@ export {default as About} from "./about/About";
 export {default as Shop} from "./shop/Shop";
 export {default as NavBar} from "./navBar/NavBar";
 export {default as ProductList} from "./product/ProductList";
+export {default as CategoryDropdown} from "./dropdown/CategoryDropdown";
