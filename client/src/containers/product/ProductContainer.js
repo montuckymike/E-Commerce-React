@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductList } from "../../components";
+import Layout from "../../Layout";
 import faker from "faker";
 class ProductContainer extends React.Component{
   state = {
@@ -34,9 +34,10 @@ class ProductContainer extends React.Component{
       <div>
       {
         this.state.productsArray
-        ? <ProductList
-        products= { this.state.productsArray }
-        addToCart= { this.addToCart }
+        ? <Layout
+          products= { this.state.productsArray }
+          addToCart= { this.addToCart }
+          cart= { this.state.cart }
          />
         : <h1> Loading Products </h1>
       }
