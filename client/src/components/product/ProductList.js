@@ -11,17 +11,16 @@ import faker from "faker";
 //   }
 // }
 
-const ProductList = () => {
+const ProductList = (props) => {
   return (
     <div>
       <ProductHero />
       <div className="product-container">
-        <Product /><Product /><Product /><Product /><Product />
-        <Product /><Product /><Product /><Product /><Product />
-        <Product /><Product /><Product /><Product /><Product />
-        <Product /><Product /><Product /><Product /><Product />
-        <Product /><Product /><Product /><Product /><Product />
-        <Product /><Product /><Product /><Product /><Product />
+        {
+          props.products.map((item) =>
+          <Product product={ item } />
+        )
+        }
       </div>
     </div>
   )

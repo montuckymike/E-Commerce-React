@@ -3,19 +3,18 @@ import {render} from "react-dom";
 import Random from "react-random";
 import faker from "faker";
 
-const Product = () => {
+const Product = (props) => {
 
   return(
     <div className="product-container">
       <div className="product-item">
         <div className="thumbnail">
-          <img src={ faker.image.image() } />
+          <img src={ props.product.img } />
             <div className="product-title">
-              <h3> <Random value="commerce.productName" /> </h3>
+              <h3> { props.product.name } </h3>
             </div>
-              <p> <strong> Price: $<Random value="commerce.price"/> </strong> </p>
-              <p><em> Category: <Random value="commerce.department" /> </em></p>
-
+              <p> <strong> Price: ${ props.product.price } </strong> </p>
+              <p><em> Category: { props.product.department } </em></p>
         </div>
       </div>
     </div>
