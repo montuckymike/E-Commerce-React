@@ -1,0 +1,8 @@
+.hero-image-profile {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:  cover;
+  background-image: url("http://www.bhmpics.com/thumbs/dambo_the_bottle_funny_situation-t3.jpg");
+  height: 1000px;
+}

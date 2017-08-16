@@ -1,13 +1,18 @@
 import React from "react";
+import ProfileHero from "./ProfileHero";
+import Hero from "../hero/Hero"
 
 const Profile = (props) => {
   return (
     <div>
-      <div className="spacer"> p</div>
-      <h1> {props.user.fName} </h1>
-      <h2> {props.user.lName} </h2>
-      <img src={props.user.avatar} />
-      <p> {props.user.email} </p>
+        <Hero />
+          <div className="ff">
+            <h1> {props.user.fName} </h1>
+            <h2> {props.user.lName} </h2>
+            <img src={props.user.avatar} />
+            <p> {props.user.email} </p>
+            <p> {props.user.phone}</p>
+          </div>
     </div>
 
   )

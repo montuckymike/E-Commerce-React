@@ -41,7 +41,8 @@ class DataProvider extends React.Component{
       fName: faker.name.firstName(),
       lName: faker.name.lastName(),
       email: faker.internet.email(),
-      avatar: faker.internet.avatar()
+      avatar: faker.internet.avatar(),
+      phone: faker.phone.phoneNumber(),
     }
     return user;
   }
