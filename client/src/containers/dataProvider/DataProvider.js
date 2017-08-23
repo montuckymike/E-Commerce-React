@@ -1,7 +1,8 @@
-import React from "react";
+import React, {Component} from "react";
 import Layout from "../../Layout";
 import faker from "faker";
-class DataProvider extends React.Component{
+
+class DataProvider extends Component{
   state = {
     productsArray: undefined,
     cart: [],
