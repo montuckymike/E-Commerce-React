@@ -5,7 +5,7 @@ import Hero from "../hero/Hero"
 const Profile = (props) => {
   return (
     <div>
-        <Hero title: something background-image: someURL />
+        <ProfileHero />
           <div className="ff">
             <h1> {props.user.fName} </h1>
             <h2> {props.user.lName} </h2>
