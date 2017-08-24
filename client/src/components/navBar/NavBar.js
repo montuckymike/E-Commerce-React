@@ -9,6 +9,7 @@ const NavBar = (props) => {
              <li> <Link to="/">Home</Link> </li>
              <li> <Link to="my-about-page">About</Link> </li>
              <li> <Link to="product-page">Products</Link> </li>
+             <li> <Link to="submit-product">Submit Product </Link> </li>
              <li> <Link to="profile"> User Profile</Link> </li>
               <div className="nav-cart">
                 <li> <Link to="cart-page"><img src="http://www.freepngimg.com/thumb/cart/4-2-cart-png-clipart-thumb.png" /></Link></li>

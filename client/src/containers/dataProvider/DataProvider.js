@@ -8,6 +8,11 @@ class DataProvider extends Component{
     cart: [],
     user: null,
     isDataLoaded: false,
+    product: {
+      name: undefined,
+      price: undefined,
+      image: undefined,
+    }
   }
 
   componentDidMount(){
@@ -48,6 +53,13 @@ class DataProvider extends Component{
     return user;
   }
 
+  onChange = (type, value) => {
+    const newProduct = this.state.product
+    newProduct[type] = value
+    this.setState( { product: newProduct })
+    console.log(this.state.product)
+  }
+
 
   render(){
     let totalPrice = 0;
@@ -70,6 +82,7 @@ class DataProvider extends Component{
           cart={ this.state.cart }
           totalPrice={totalPrice.toFixed(2)}
           user={this.state.user}
+          onChange={ this.onChange }
          />
         : <h1> Loading ... </h1>
       }
