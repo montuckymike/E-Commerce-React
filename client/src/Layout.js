@@ -29,7 +29,7 @@ const Layout = (props) => (
         <Route path="/my-shop-page" component={ DataProvider } />
         <Route
           path="/submit-product"
-          render={() => <SubmitProductContainer onChange={ props.onChange } />
+          render={() => <SubmitProductContainer onChange={ props.onChange } submitProduct={ props.submitProduct }/>
           }
         />
         <Route

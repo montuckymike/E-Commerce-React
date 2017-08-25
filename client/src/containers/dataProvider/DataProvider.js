@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import Layout from "../../Layout";
 import faker from "faker";
+import $ from 'jquery';
+
 
 class DataProvider extends Component{
   state = {
@@ -8,11 +10,7 @@ class DataProvider extends Component{
     cart: [],
     user: null,
     isDataLoaded: false,
-    product: {
-      name: undefined,
-      price: undefined,
-      image: undefined,
-    }
+    product:{}
   }
 
   componentDidMount(){
@@ -60,6 +58,17 @@ class DataProvider extends Component{
     console.log(this.state.product)
   }
 
+  submitProduct = (event) => {
+    event.preventDefault()
+    $.ajax({
+      url: '/api/products',
+      method: 'POST',
+      data: this.state.product
+    }).done((response) =>
+    console.log("Added product: ", response))
+    console.log(this.state.product)
+  }
+
 
   render(){
     let totalPrice = 0;
@@ -83,6 +92,7 @@ class DataProvider extends Component{
           totalPrice={totalPrice.toFixed(2)}
           user={this.state.user}
           onChange={ this.onChange }
+          submitProduct={this.submitProduct}
          />
         : <h1> Loading ... </h1>
       }
